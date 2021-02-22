@@ -73,7 +73,7 @@
       - kernel-devel
       - kernel-headers
       - distro-sync  
-      ignore_errors: true    
+    ignore_errors: true    
 
   - name: Restart server
     command: /sbin/shutdown -r +1
