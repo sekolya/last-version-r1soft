@@ -37,7 +37,7 @@
     when: ansible_os_family == "RedHat"
     yum: 
       name: 
-      - update
+#       - update
       - serverbackup-enterprise-agent  
       - kernel-devel
       - kernel-headers
