@@ -3,13 +3,13 @@
   become_method: sudo
   user: centos
   hosts: all
-- name: Install Prerequisites
-  yum:
-    name:
-    - epel-release
-    - vim
-    - wget
-    - unzip
+# - name: Install Prerequisites
+#   yum:
+#     name:
+#     - epel-release
+#     - vim
+#     - wget
+#     - unzip
 - name: add r1soft repository
   yum_repository:
     name: r1soft
