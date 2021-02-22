@@ -58,22 +58,22 @@
     command: "r1soft-setup --get-key   http://54.90.128.58:8080" 
 
 
-  - name: Open port for 1167 on centos 7 
-    when: ansible_distribution_major_version == "7"
-    firewalld:
-      port: 1167/tcp
-      permanent: true
-      state: enabled
-    ignore_errors: true
+#   - name: Open port for 1167 on centos 7 
+#     when: ansible_distribution_major_version == "7"
+#     firewalld:
+#       port: 1167/tcp
+#       permanent: true
+#       state: enabled
+#     ignore_errors: true
 
 
-  - name: install for fix bugs
-    yum:
-      name: 
-      - kernel-devel
-      - kernel-headers
-      - distro-sync  
-    ignore_errors: true    
+#   - name: install for fix bugs
+#     yum:
+#       name: 
+#       - kernel-devel
+#       - kernel-headers
+#       - distro-sync  
+#     ignore_errors: true    
 
   - name: Restart server
     command: /sbin/shutdown -r +1
